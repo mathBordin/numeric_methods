@@ -1,0 +1,35 @@
+# depslib dependency file v1.0
+1588619803 source:c:\users\bordi\desktop\numérico\ep\ep\main.c
+	<stdio.h>
+	<stdlib.h>
+	<math.h>
+	"heat_equation.h"
+
+1589674839 c:\users\bordi\desktop\numérico\ep\ep\heat_equation.h
+	<stdio.h>
+	<stdlib.h>
+	<math.h>
+	"solve_system.h"
+
+1587578166 c:\users\bordi\desktop\numérico\ep\ep\solve_system.h
+	<stdio.h>
+	<stdlib.h>
+	<math.h>
+
+1589680403 source:c:\users\bordi\desktop\numérico\ep\ep_matheus_joao\main.c
+	<stdio.h>
+	<stdlib.h>
+	<math.h>
+	"heat_equation.h"
+
+1589679759 c:\users\bordi\desktop\numérico\ep\ep_matheus_joao\heat_equation.h
+	<stdio.h>
+	<stdlib.h>
+	<math.h>
+	"solve_system.h"
+
+1589677474 c:\users\bordi\desktop\numérico\ep\ep_matheus_joao\solve_system.h
+	<stdio.h>
+	<stdlib.h>
+	<math.h>
+

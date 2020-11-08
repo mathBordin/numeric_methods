@@ -1,0 +1,109 @@
+# depslib dependency file v1.0
+1593227837 source:c:\users\bordi\desktop\numérico\ep2\inverse_problem.c
+	"inverse_problem.h"
+
+1593225189 c:\users\bordi\desktop\numérico\ep2\inverse_problem.h
+	<stdio.h>
+	<stdlib.h>
+	<math.h>
+	"aux_math.h"
+	"heat_equation.h"
+
+1593225180 c:\users\bordi\desktop\numérico\ep2\aux_math.h
+	<stdio.h>
+	<stdlib.h>
+	<math.h>
+
+1593206755 c:\users\bordi\desktop\numérico\ep2\heat_equation.h
+	<stdio.h>
+	<stdlib.h>
+	<math.h>
+	"aux_math.h"
+
+1593227363 source:c:\users\bordi\desktop\numérico\ep2\main.c
+	<stdio.h>
+	<stdlib.h>
+	<time.h>
+	"aux_math.h"
+	"heat_equation.h"
+	"inverse_problem.h"
+
+1593225213 source:c:\users\bordi\desktop\numérico\ep2\aux_math.c
+	"aux_math.h"
+	<float.h>
+
+1593206980 source:c:\users\bordi\desktop\numérico\ep2\heat_equation.c
+	"heat_equation.h"
+
+1593225213 source:c:\users\bordi\desktop\numérico\ep2_matheus_joao\aux_math.c
+	"aux_math.h"
+	<float.h>
+
+1593225180 c:\users\bordi\desktop\numérico\ep2_matheus_joao\aux_math.h
+	<stdio.h>
+	<stdlib.h>
+	<math.h>
+
+1593280750 source:c:\users\bordi\desktop\numérico\ep2_matheus_joao\main.c
+	<stdio.h>
+	<stdlib.h>
+	<time.h>
+	"aux_math.h"
+	"heat_equation.h"
+	"inverse_problem.h"
+
+1593278511 c:\users\bordi\desktop\numérico\ep2_matheus_joao\heat_equation.h
+	<stdio.h>
+	<stdlib.h>
+	<math.h>
+	"aux_math.h"
+
+1593225189 c:\users\bordi\desktop\numérico\ep2_matheus_joao\inverse_problem.h
+	<stdio.h>
+	<stdlib.h>
+	<math.h>
+	"aux_math.h"
+	"heat_equation.h"
+
+1593278473 source:c:\users\bordi\desktop\numérico\ep2_matheus_joao\heat_equation.c
+	"heat_equation.h"
+
+1593280715 source:c:\users\bordi\desktop\numérico\ep2_matheus_joao\inverse_problem.c
+	"inverse_problem.h"
+
+1593278473 source:c:\users\bordi\documents\numérico\ep\ep2_matheus_joao\heat_equation.c
+	"heat_equation.h"
+
+1593278511 c:\users\bordi\documents\numérico\ep\ep2_matheus_joao\heat_equation.h
+	<stdio.h>
+	<stdlib.h>
+	<math.h>
+	"aux_math.h"
+
+1593225180 c:\users\bordi\documents\numérico\ep\ep2_matheus_joao\aux_math.h
+	<stdio.h>
+	<stdlib.h>
+	<math.h>
+
+1593280715 source:c:\users\bordi\documents\numérico\ep\ep2_matheus_joao\inverse_problem.c
+	"inverse_problem.h"
+
+1593225189 c:\users\bordi\documents\numérico\ep\ep2_matheus_joao\inverse_problem.h
+	<stdio.h>
+	<stdlib.h>
+	<math.h>
+	"aux_math.h"
+	"heat_equation.h"
+
+1593280750 source:c:\users\bordi\documents\numérico\ep\ep2_matheus_joao\main.c
+	<stdio.h>
+	<stdlib.h>
+	<time.h>
+	"aux_math.h"
+	"heat_equation.h"
+	"inverse_problem.h"
+
+1593481528 source:c:\users\bordi\documents\numérico\ep\ep2_matheus_joao\aux_math.c
+	"aux_math.h"
+	<float.h>
+

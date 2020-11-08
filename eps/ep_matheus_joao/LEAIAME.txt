@@ -1,0 +1,67 @@
+# MAP3121 - EP Parte 1: Um problema inverso para obtenção de distribuição de temperatura
+
+Matheus Bordin Gomes -  9838028 - Turma 2
+
+João Ferreira Cysne  - 10774020 - Turma 3
+
+
+## Contextualização 
+Esse programa foi feito desenvolvido para solucionar numericamente o problema da distribuição de 
+calor em uma barra unidimensional. O comprimento da barra é considerado normalizado, de forma que 
+varia entre 0 e 1. Já o tempo varia entre 0 e T, tal que nas resoluções T foi considerado igual a 1. 
+
+Para a resolução numérica da equação de calor, foram implementados três métodos. O primeiro é o 
+método é de Diferenças Finitas, o segundo é o método de Euler implícito e o terceiro é o método 
+de Crank-Nicolson. 
+
+
+## Estrutura de arquivos e compilação
+Todos os arquivos necessários para compilar o programa estão na pasta ep_matheus_joao. O header 
+"solve_system.h" implementa as funções relativas ao item a) da Segunda Tarefa, ou seja, a decomposição
+LDLt de uma matriz tridiagonal simétrica (de forma otimizada, utilizando vetores) e a resolução de 
+sistemas do tipo LDLt*x=b. Já o header "heat_equation.h" implementa todas as funções relativas à resolução
+da equação do calor, às condições de fronteira, à condição inicial, ao cálculo da solução exata e ao
+cálculo do erro. Por fim, no arquivo main.c é implementada toda a interface com usuário e log do dados
+gerados sobre a evolução da temperatura na barra a cada 0.1s, os quais são salvos no arquivo "dados_ep.txt".
+
+Para compilar o programa, utilize o compilador gcc para C++14 ISO C++ language standard. Vale ainda ressaltar
+que compilar o programa com otimização no nível [-O3] aumenta significativamente o desempenho do programa. 
+Caso utilize a IDE CodeBlocks, poderá utilizar o arquivo "ep.cbp" para abrir o projeto com o compilador e 
+o nível de otimização já configurados. 
+
+> Além disso, foi disponibilizado o script de Matlab "ep_numerico.m". Ele serve para plotar os gráficos da evolução
+temporal da temperatura ao longo da barra gerados no arquivo "dados_ep.txt".
+
+
+## Uso
+Após executar o programa, o usuário deve selecionar qual método deseja que seja utilizado para solucionar
+o problema. Digite 0 para o método de Diferenças Finitas (Primeira Tarefa), 1 para o método de Euler 
+implícito (Segunda Tarefa - item b) e 2 para o método de Crank-Nicolson (Segunda Tarefa - item b). Pressione 
+Enter para confirmar a sua escolha.
+
+Dando sequência, você deverá escolher qual dos exercícios propostos deseja resolver. Digite 0 para resolver 
+o problema proposto como teste no item a) da Primeira Tarefa. Digite 1 para resolver o problema obrigatório 
+do item a) da Primeira Tarefa. Digite 2 para resolver o item b) da Primeira Tarefa. E, digite 3 para resolver
+o item c) da Primeira Tarefa. Pressione Enter para confirmar a sua escolha.
+
+Caso o método de resolução escolhido seja o Método de Diferenças-Finitas, o usuário deverá escolher o número,
+que deve ser inteiro (por exemplo 10, 50, 100 e etc.), de pontos em que a barra será discretizada e também o 
+valor de lambda, que deve ser um número real (por exemplo 0.5, 0.25 e etc.). O valor de M será determinado em 
+função dos dois valores escolhidos anteriormente. Caso o valor escolhido para lambda seja maior do 0.5, o método 
+de Diferenças-Finitas irá divergir. Após digitar cada um dos valores, o usuário deverá pressionar enter para confirmar
+a escolha.
+
+Caso o método escolhido seja o Método de Euler implícito ou o Método de Crank-Nicolson, o usuário deverá escolher
+apenas o número, que deve ser inteiro (por exemplo 10, 50, 100 e etc.), de pontos em que a barra será discretizada. 
+Pressione enter para confirmar o número escolhido.
+
+Nesse ponto, o problema será resolvido. Caso o problema escolhido não seja o item c), o qual não possui solução
+exata, o máximo erro absoluto (dado por max(abs(solucao_exata[i] - solucao_calculada[i]))) e o máximo erro 
+relativo (dado por max(abs((solucao_exata[i] - solucao_calculada[i])/solucao_exata[i]))) serão calculados. Além 
+disso, o erro de truncamento também será calculado, de acordo com o método escolhido.
+
+Por fim, após a resolução do problema, os dados com a evolução temporal da temperatura ao longo da barra a cada 0.1s serão salvos
+no arquivo "dados_ep.txt". 
+
+> Esses dados podem ser utilizados para plotar os gráficos de evolução temporal da temperatura
+ao longo da barra com ajuda do script de Matlab "ep_numerico.m".

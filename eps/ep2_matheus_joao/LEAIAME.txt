@@ -1,0 +1,48 @@
+# MAP3121 - EP Parte 2: Um problema inverso para a equação do calor
+
+Matheus Bordin Gomes -  9838028 - Turma 2
+
+João Ferreira Cysne  - 10774020 - Turma 3
+
+
+## Contextualização 
+Esse programa foi desenvolvido para solucionar numericamente o problema inverso para a equação de calor,
+ou seja, a partir de uma distribuição final de temperatura, determinar a intensidade das fontes de calor aplicadas 
+em posições conhecidas de uma barra unidimensional. O comprimento da barra é considerado normalizado, de forma que 
+varia entre 0 e 1. Já o tempo varia entre 0 e T, tal que nas resoluções T foi considerado igual a 1. 
+
+Para a resolução numérica da equação de calor, foi utilizado o método de Crank-Nicolson, implementado na primeira
+parte deste Exercício Programa. Para obter a intensidade das fontes de calor, foi utilizado o método dos mínimos
+quadrados (MMQ), no qual foi utilizada a decomposição LDL^t para a resolução do sistema normal. 
+
+## Estrutura de arquivos e compilação
+Todos os arquivos necessários para compilar o programa estão na pasta ep2_matheus_joao. Os arquivos "heat_equation.h"
+e "heat_equation.c" implementam as funções relativas a resolução da equação de calor, pelo método de Crank-Nicolson,
+para nf fontes pontuais posicionadas nos pontos p. Os arquivos "aux_math.h" e "aux_math.c" implementam as funções 
+relativas a fatoração LDL^t tanto de uma matriz simétrica densa quanto de uma matriz tridiagonal, além da resolução
+de sistemas (LDL^t)x=b para os dois casos anteriores. Também é feita a implementação da montagem do sistema normal, do 
+produto interno e da geração de números pseudo-aleatórios com distribuição aproximadamente normal no intervalo [-1,1[.
+Já os arquivos "inverse_problem.h" e "inverse_problem.c" implementam a resolução do problema inverso e o cálculo do
+erro E_2. Por fim, o arquivo "main.c" implementa a interface com o usuário, a leitura de dados e a chamada das funções
+para a resolução do problema. 
+
+Para compilar o programa, utilize o compilador gcc para C++14 ISO C++ language standard. Vale ainda ressaltar
+que compilar o programa com otimização no nível [-O3] aumenta significativamente o desempenho do programa. 
+Caso utilize a IDE CodeBlocks, poderá utilizar o arquivo "EP2.cbp" para abrir o projeto já configurado.
+
+> Além disso, foi disponibilizado o script de Matlab "plot_ep2_data.m", o qual serve para plotar os gráficos da
+solução determinada e da solução aproximada, com os dados gerados pelo programa e salvos em um arquivo ".txt". 
+
+## Uso
+Após executar o programa, o usuário deve selecionar qual  dos exercícios propostos deseja resolver. Ou seja, deve-se
+optar pela resolução dos itens a, b, c ou d. Pressione Enter para confirmar a sua escolha.
+
+Caso os itens c ou d tenham sido escolhidos, o usuário deverá em sequência optar por um dos seguintes valores de N:
+128, 256, 512, 1024 e 2048. Pressione Enter para confirmar a sua escolha.
+
+Dando sequência, o usuário deve escolher o nome do arquivo em que os dados serão salvos. Recomenda-se utilizar o nome 
+"dados_ep2.txt", pois dessa forma o script "plot_ep2_data.m" não precisará ser alterado para plotar os dados. Caso 
+seja escolhido outro nome, basta alterar a linha 11 do script e inserir o nome escolhido para o arquivo.
+
+Por fim, após a resolução do problema, serão impressos na tela os valores das intensidades obtidas e do erro E_2 (Equação 39
+do enunciado). Nos dois primeiros casos (a e b), em que a resposta é conhecida, essa também é impressa.
